@@ -1,2 +1,2 @@
 # Minor-1
-Load Balancing 
+Design and Implementation of Load Balancing Algorithms in Cloud Computing 
