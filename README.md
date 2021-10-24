@@ -17,7 +17,7 @@ We have devised a 2-tier load balancing architecture using load balancing algori
  
  
  
-**** SYSTEM REQUIREMENTS**
+**** SYSTEM REQUIREMENTS****
 
 **Hardware Interface: **
 
