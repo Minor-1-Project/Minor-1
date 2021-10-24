@@ -21,14 +21,14 @@ We have devised a 2-tier load balancing architecture using load balancing algori
 
 **Hardware Interface: **
 
-      Linux Operating System to be used (works with Virtualization also). 
-      Minimum RAM requirement for proper functioning is 4 GB. 
-      Required input as well as output devices. 
+Linux Operating System to be used (works with Virtualization also). 
+Minimum RAM requirement for proper functioning is 4 GB. 
+Required input as well as output devices. 
 
 **Software Interface: **
 
-      This system is developed in the java programming language. 
-      java compiler (Eclipse IDE)
+This system is developed in the java programming language. 
+java compiler (Eclipse IDE)
 
  
  
