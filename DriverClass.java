@@ -67,17 +67,23 @@ public class DriverClass  {
 
 		
         ArrayList<Integer> dclb1arr = new ArrayList<Integer>();
+        ArrayList<Integer> dclb2arr = new ArrayList<Integer>();
 
         List<Integer> parameter1=new ArrayList<Integer>();
         List<Float> parameter2=new ArrayList<Float>();
+        List<Integer> parameter3=new ArrayList<Integer>();
+        List<Float> parameter4=new ArrayList<Float>();
         List<Integer> sequenceList=new ArrayList<Integer>();
+        List<Integer> sequenceList1=new ArrayList<Integer>();
  
         PriorityBasedRoundRobin obj=new PriorityBasedRoundRobin(n,taskarr);
         ranarr =obj.randomFunc();
        prnarr =obj.bubbleSort(ranarr,taskarr);
        System.out.println("\n");
        dclb1arr=(ArrayList<Integer>) obj.dcLoadbalancer1(prnarr);
+       dclb2arr=(ArrayList<Integer>) obj.dcLoadbalancer2(prnarr);
        int d =dclb1arr.size();
+       int e =dclb2arr.size();
       System.out.println("\n");
       System.out.println("Enter the choice: \n1 for integer value input\n2 for float value input "); 
      
@@ -105,18 +111,50 @@ public class DriverClass  {
     		  System.out.println("wrong choice");
     		  try {
     	            Thread.sleep(2000);
-    	        } catch (InterruptedException e) {
+    	        } catch (InterruptedException e1) {
     	            
-    	            e.printStackTrace();
-    	        }
-    	        System.out.println("\033[H\033[2J");  
+    	            e1.printStackTrace();
+    	        }  
     	        System.out.flush(); 
     	  }
       }
+      System.out.println("Enter the choice: \n1 for integer value input\n2 for float value input "); 
+      
+      System.out.println("Total number of users directed to Data Centre 2 LoadBalancer ----> "+d);
+      for(int i=0;i<d;i++)
+      {
+    	  System.out.println("Enter the task which the user "+dclb2arr.get(i)+"  has to perform");
+    	  System.out.println("Please enter your choice(1 or 2):");
+    	  int choice1=sc.nextInt();
+    	  if (choice1==1)
+    	  {
+    		  System.out.println("Enter an integer value");
+              parameter3.add(sc.nextInt());
+              sequenceList1.add(choice1);
+              
+    	  }
+    	  else if(choice1==2)
+    	  {
+    		  System.out.println("Enter a float value");
+              parameter4.add(sc.nextFloat());
+              sequenceList1.add(choice1);
 
+    	  }
+    	  else {
+    		  System.out.println("wrong choice");
+    		  try {
+    	            Thread.sleep(2000);
+    	        } catch (InterruptedException e1) {
+    	            
+    	            e1.printStackTrace();
+    	        }  
+    	        System.out.flush(); 
+    	  }
+      }
       DC1LoadBalancer obj1=new DC1LoadBalancer(d,parameter1,parameter2,sequenceList );
       obj1.least_workload1();
-
+      DC2LoadBalancer obj2=new DC2LoadBalancer(e,parameter3,parameter4,sequenceList1 );
+      obj2.least_workload2();
     }
  
 }
