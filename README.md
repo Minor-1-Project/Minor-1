@@ -1,5 +1,5 @@
 # Minor-1
-****Design and Implementation of Load Balancing Algorithms in Cloud Computing ****
+**Design and Implementation of Load Balancing Algorithms in Cloud Computing
 
 **PROBLEM:**
 1.Heavy load on servers resulting in server breakdown:
@@ -17,7 +17,7 @@ We have devised a 2-tier load balancing architecture using load balancing algori
  
  
  
-**** SYSTEM REQUIREMENTS****
+**** SYSTEM REQUIREMENTS
 
 **Hardware Interface: **
 
